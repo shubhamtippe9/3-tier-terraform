@@ -23,7 +23,7 @@ curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
 cd /opt/apache-tomcat-9.0.115/lib/
 curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
 
-until mysqladmin ping -h ${var.db_endpoint} -u arya -p${var.db_password} --silent; do
+until mysqladmin ping -h ${var.db_endpoint} -u shubham -p${var.db_password} --silent; do
   sleep 10
 done
 
@@ -54,11 +54,11 @@ resource "aws_instance" "db_client" {
 yum update -y
 yum install -y mariadb105
 
-until mysqladmin ping -h ${var.db_endpoint} -u arya -p${var.db_password} --silent; do
+until mysqladmin ping -h ${var.db_endpoint} -u shubham -p${var.db_password} --silent; do
   sleep 10
 done
 
-mysql -h ${var.db_endpoint} -u arya -p${var.db_password} <<MYSQL
+mysql -h ${var.db_endpoint} -u shubham -p${var.db_password} <<MYSQL
 CREATE DATABASE IF NOT EXISTS studentapp;
 USE studentapp;
 
