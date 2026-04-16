@@ -29,7 +29,7 @@ done
 
 cat <<EOT >> /opt/apache-tomcat-9.0.115/conf/context.xml
 <Resource name="jdbc/TestDB" auth="Container"
-username="arya"
+username="shubham"
 password="${var.db_password}"
 driverClassName="com.mysql.jdbc.Driver"
 url="jdbc:mysql://${var.db_endpoint}:3306/studentapp"/>
