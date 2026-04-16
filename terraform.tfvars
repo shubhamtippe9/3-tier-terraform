@@ -19,7 +19,6 @@ ami           = "ami-098e39bafa7e7303d"
 instance_type = "t3.micro"
 key_name      = "north"
 
-app_sg_id = "sg-0e0fd7e587edf6396"   # 🔥 replace
+
 
 db_password = "shubham21"
-db_sg_id    = "sg-0e0fd7e587edf6396" # 🔥 replace

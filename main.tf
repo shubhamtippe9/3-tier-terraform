@@ -22,7 +22,7 @@ module "rds" {
 
   subnet_ids  = [module.vpc.public_subnet_id, module.vpc.private_subnet_id]
   db_password = var.db_password
-  db_sg_id    = var.db_sg_id
+  db_sg_id    = module.vpc.db_sg_id   
 }
 
 module "ec2" {
@@ -35,7 +35,7 @@ module "ec2" {
   public_subnet_id  = module.vpc.public_subnet_id
   private_subnet_id = module.vpc.private_subnet_id
 
-  app_sg_id         = var.app_sg_id
+  app_sg_id         = module.vpc.app_sg_id   
 
   db_endpoint       = module.rds.db_endpoint
   db_password       = var.db_password

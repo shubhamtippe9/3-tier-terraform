@@ -21,8 +21,6 @@ variable "ami" {}
 variable "instance_type" {}
 variable "key_name" {}
 
-variable "app_sg_id" {}
 
 # RDS
 variable "db_password" {}
-variable "db_sg_id" {}
